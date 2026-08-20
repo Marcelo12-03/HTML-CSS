@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Aula - 4 Sistema e CSS</title>
+</head>
+<body>
+    <header>
+     	<h1>Meu Site Semântico</h1>
+    </header>
+    <nav>
+       <ul>
+     	   <li><a href="#">Início</a></li>
+     	   <li><a href="#">Sobre</a></li>
+     	   <li><a href="#">Contato</a></li>
+       </ul>
+    </nav>
+    <main>
+    	<section>
+    		<h3>Bem-vindo ao meu site!</h3>
+    		<p>Um texto dentro de umarticle,
+    		 indicando um bloco que faz sentido sozinho.</p>
+    	</section>
+    	<aside>
+    		<p>Conteúdos extras e links paralelos aparecem aqui no aside.</p>
+    	</aside>
+
+    	<div>
+    		<h3>Bloco agrupado</h3>
+    		<p>Este texto
+    		    possui um <span class="destaque">trecho
+    		    destacado</span>com span.</p>
+    	</div>
+    </main>
+    <footer>
+    	<p>Meu primeiro site semantico - 2026</p>
+    </footer>
+
+    <style>
+    	header {
+    		background: #003366;
+    		color: white;
+    		padding: 20px;
+    	}
+    	nav {
+    		background: #004488;
+    		padding: 10px;
+    	}
+    	nav a {
+    		color: white;
+    		text-decoration: none;
+    		margin-right: 15px;
+    		font-weight: bold;
+    	}
+    	main {
+    		background-color: #f4f4f4;
+    		padding: 30px;
+    	}
+    	footer {
+    		background-color: #333333;
+    		color: #cccccc;
+    		text-align: center;
+    		padding: 15px;
+    	}
+    	.destaque {
+    		color: #ff4757;
+    		font-weight: bold;
+    	}
+    </style>
+</body>
+</html>
