@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card-produto {
+    width: 320px;
+    border: 3px solid #cd7f32;
+    padding: 25px;
+    margin: 50px auto;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    color: #e59848;
+    
+}
+.card-produto p {
+    text-decoration: #e59848;
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #e59848;
+}
+.btn-agendar {
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    background-color: #cd7f32;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 4px;font-weight: bold;
+    transition: backgrond-color 0.3s ease;
+}
+.btn-agendar :hover {
+    background-color: #e59848;
+    cursor: pointer;
+}
