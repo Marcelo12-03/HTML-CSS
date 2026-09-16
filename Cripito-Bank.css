@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0d0e12;
+    color: #ffffff;
+}
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #161a23;
+    color: #00ff87;
+    padding: 20px 5%;
+}
+
+.topo nav {
+    display: flex;
+    gap: 20px;
+}
+
+.topo nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.hero {
+    height: 250px;
+    background-color: #1f2633;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+.container {
+    padding: 40px 5%;
+}
+
+.titulo-secao {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #00ff87;
+}
+
+.grid-destinos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.card-pratos {
+    background-color: #161a23;
+    padding: 30px;
+    border: 1px solid #2d3545;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.card-destaque {
+    grid-column: span 2;
+    background-color: #00ff87;
+    color: #0d0e12;
+    font-weight: bold;
+}
+@media (max-width: 768px) {
+    .grid-destinos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card-destaque {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .topo {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .grid-destinos {
+        grid-template-columns: 1fr;
+    }
+}
+
+.site-footer {
+    background-color: #161a23;
+    color: #666666;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 1px solid #2d3545;
+}
