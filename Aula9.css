@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fundo-escuro: #0a0a12;
+    --fundo-card: #121225;
+    --roxo-quantico: #6c5ce7;
+    --verde-acido: #00ff7f;
+    --laranja-sobrecarga: #ff6b6b;
+    --texto-claro: #e0e0ff;
+    --texto-mutado: #8a8ab0;
+}
+
+body {
+    background-color: var(--fundo-escuro);
+    color: var(--texto-claro);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.painel-nave {
+    width: 100%;
+    max-width: 1100px;
+    background: rgba(18, 18, 37, 0.6);
+    border: 1px solid rgba(108, 92, 231, 0.2);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(138, 138, 176, 0.2);
+    padding-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--texto-claro);
+    text-shadow: 0 0 10px rgba(108, 92, 231, 0.5);
+}
+
+.coordenadas {
+    color: var(--texto-mutado);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 5px;
+}
+
+.telemetria {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin-top: 15px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(0, 255, 127, 0.2);
+}
+
+.reator-brilho {
+    width: 12px;
+    height: 12px;
+    background-color: var(--verde-acido);
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 8px var(--verde-acido);
+    animation: pulsarReator 1.5s infinite ease-in-out;
+}
+
+@keyframes pulsarReator {
+    0% {
+        transform: scale(0.9);
+        box-shadow: 0 0 4px var(--verde-acido);
+        opacity: 0.6;
+    }
+    50% {
+        transform: scale(1.2);
+        box-shadow: 0 0 15px var(--verde-acido), 0 0 25px var(--verde-acido);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.9);
+        box-shadow: 0 0 4px var(--verde-acido);
+        opacity: 0.6;
+    }
+}
+
+.grade-modulos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card-modulo {
+    background: var(--fundo-card);
+    border: 1px solid rgba(138, 138, 176, 0.1);
+    border-radius: 12px;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: surgirCard 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes surgirCard {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card-modulo h2 {
+    font-size: 1.1rem;
+    color: var(--texto-mutado);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.status-ativo {
+    color: var(--verde-acido);
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0, 255, 127, 0.3);
+}
+
+.barra-vazia {
+    width: 100%;
+    height: 12px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid rgba(138, 138, 176, 0.2);
+}
+
+.barra-impulso {
+    width: 75%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--roxo-quantico), var(--laranja-sobrecarga));
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+}
+
+.combustivel-porcentagem {
+    font-size: 1.3rem;
+    color: var(--laranja-sobrecarga);
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(255, 107, 107, 0.3);
+}
+
+.radar-varredura {
+    width: 60px;
+    height: 60px;
+    border: 2px solid var(--roxo-quantico);
+    border-radius: 50%;
+    margin: 10px auto 0;
+    position: relative;
+    background: radial-gradient(circle, rgba(108, 92, 231, 0.1) 0%, transparent 70%);
+}
+
+.radar-varredura::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-left: 2px solid var(--verde-acido);
+    border-radius: 50%;
+    top: -2px;
+    left: -2px;
+    animation: girarRadar 2s linear infinite;
+}
+
+@keyframes girarRadar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
