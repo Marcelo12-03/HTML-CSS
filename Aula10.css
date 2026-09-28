@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #2f3640;
+    color: #ffffff;
+}
+
+.topo {
+    background-color: #1c1e21;
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.logo span {
+    color: #20bf6b;
+}
+.btn-topo a {
+    border-radius: 25px;
+    border-color: #20bf6b;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #20bf6b;
+    transition: 0.3s;
+    border: 2px solid #20bf6b;
+    text-decoration: none;
+    font-weight: 500;
+}
+.btn-topo a:hover {
+    background-color: #20bf6b;
+    color: #ffffff;
+}
+
+.hero-apresentacao {
+    background-image: url('https://picsum.photos/1200/600?tech');
+    background-size: cover;
+    background-position: center;
+    min-height: 450px;
+}
+.ouverlay {
+    background-color: rgba(0,0,0,0.6);
+    min-height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+}
+.hero-conteudo {
+    text-align: center;
+    color: #ffffff;
+}
+.hero-conteudo h1 {
+    padding-top: 100px;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem 0;
+}
+.hero-conteudo p {
+    font-size: 1.1rem;
+    margin: 2rem;
+}
+
+.hero-conteudo a {
+    border-radius: 10px;
+    background-color: #20bf6b;
+    padding: 10px 20px;
+    color: #2f3133;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: 500;
+}
+.hero-conteudo a:hover {
+    background-color: #158d4d;
+}
+
+.container-pratos {
+    padding: 3rem 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+.card {
+    border-radius: 10px;
+    background-color: #1c1e21;
+    padding: 2rem;
+    border: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: 0.5s;
+    border: 2px solid #1c1e21;
+}
+.card h3 {
+    color: #20bf6b;
+    margin: 0.5rem;
+}
+.card p {
+    margin: 0.25rem;
+}
+.card:hover {
+    border: 2px solid #20bf6b;
+}
